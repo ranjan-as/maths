@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Prime";
+}
+
+<h2>Prime</h2>
+@using (Html.BeginForm("Prime","Primeno",FormMethod.Post))
+{
+    <label for="Number">Enter a number:</label>
+    <input type="text" id="Number" name="Number" />
+    <input type="submit" value="Check" />
+    <h3>@ViewBag.hmm</h3>
+}
+

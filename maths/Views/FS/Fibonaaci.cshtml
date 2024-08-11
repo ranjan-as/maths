@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Fibonacci";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Fibonacci", "Fs", FormMethod.Post))
+{
+    <input type="number" placeholder="Enter the number of Fibonacci numbers to generate" name="t1" />
+    <input type="submit" value="Calculate" />    
+}
+@if (ViewBag.Numbers != null)
+{
+    <ul>
+        @foreach (var number in ViewBag.Numbers as List<int>)
+        {
+            <li>@number</li>
+        }
+    </ul>
+}

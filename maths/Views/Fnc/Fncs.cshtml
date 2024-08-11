@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Fncs";
+}
+
+<h2>Fncs</h2>
+
+
+
+@using (Html.BeginForm("Fncs", "Fnc", FormMethod.Post))
+{
+    <input type="number" placeholder="Enter the number of Fibonacci numbers to generate" name="t1" />
+    <input type="submit" value="Calculate" />
+}
+
+<p style="color:red">@ViewBag.ErrorMessage</p>
+
+<ul>
+    @foreach (var number in ViewBag.Numbers as List<int>)
+    {
+        <li>@number</li>
+    }
+</ul>

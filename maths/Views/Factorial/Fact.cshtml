@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Fact";
+}
+
+<h2>Fact</h2>
+@using (Html.BeginForm("Fact", "Factorial", FormMethod.Post))
+{
+    <label for="txtNo">Enter the number</label>
+    <input type="text" placeholder="Enter the number" name="txtNo" />
+    <input type="submit" value="Factorial" />
+
+    <h3>@ViewBag.result</h3>
+}
+
